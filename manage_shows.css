@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light background for contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #333; /* Dark color for headers */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+select, input[type="datetime-local"], input[type="number"], button {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Full width for form elements */
+}
+
+button {
+    background-color: #28a745; /* Green button for Add Show */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.show-list {
+    margin-top: 20px;
+}
+
+.show-card {
+    background-color: #fff; /* White background for show card */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.show-details {
+    margin-bottom: 10px; /* Space between details and delete button */
+}
+
+.show-details div {
+    margin-bottom: 5px; /* Space between individual details */
+    color: #333; /* Dark text for readability */
+}
+
+.delete-form {
+    display: inline; /* Keep delete form inline with the show card */
+}
+
+.delete-button {
+    background-color: #dc3545; /* Red button for Delete */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Logout button */
+form[action="logout.php"] {
+    margin-top: 20px;
+}
+
+form[action="logout.php"] button {
+    background-color: #007bff; /* Blue button for Logout */
+}
+
+form[action="logout.php"] button:hover {
+    background-color: #0069d9; /* Darker blue on hover */
+}
