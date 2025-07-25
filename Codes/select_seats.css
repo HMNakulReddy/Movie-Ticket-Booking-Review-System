@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('image4.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h2 {
+    text-align: center;
+}
+
+.screen {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.seat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seat-row {
+    display: flex;
+    align-items: center;
+    margin: 10px 0; /* Increased margin between rows */
+}
+
+.row-label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.seat {
+    display: none; /* Hide the checkbox */
+}
+
+.seat-label {
+    width: 45px; /* Adjust the width of the seat symbol */
+    height: 45px; /* Adjust the height of the seat symbol */
+    border-radius: 50%; /* Make it circular */
+    background-color: white; /* Default color for available seats */
+    border: 2px solid green; /* Green border */
+    color: black; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px; /* Space between seats */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.seat-label:hover {
+    background-color: lightgreen; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the seat on hover */
+}
+
+.seat:checked + .seat-label {
+    background-color: darkgreen; /* Color when selected */
+    color: white; /* Change text color when selected */
+}
+
+.unavailable + .seat-label {
+    background-color: grey; /* Color for already selected seats */
+    cursor: not-allowed; /* Change cursor for unavailable seats */
+}
+
+.button-container {
+    text-align: center;
+}
+
+.book-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: green; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.book-button:hover {
+    background-color: darkgreen; /* Change button color on hover */
+}
+
+.seat.unavailable {
+    background-color: grey; /* Color for booked seats */
+    cursor: not-allowed; /* Change cursor to indicate unavailability */
+}
+
+/* Ensure space between seat rows and between seats */
+.seat-row {
+    margin-bottom: 10px; /* Adjust spacing between rows */
+}
+
+.seat-label {
+    margin: 0 10px; /* Space between seats increased */
+}
+/* Completely hide all input checkboxes */
+input[type="checkbox"] {
+    display: none; /* This ensures that checkboxes are hidden */
+}
+
+/* Style for seat labels */
+.seat-label {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; 
+    background-color: white; /* Default color for available seats */
+    border: 2px solid green;
+    color: black; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.seat-label:hover {
+    background-color: lightgreen; /* Color on hover */
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+input[type="checkbox"]:checked + .seat-label {
+    background-color: darkgreen; /* Color when selected */
+    color: white;
+}
+
+input[type="checkbox"].unavailable + .seat-label {
+    background-color: grey; /* For unavailable seats */
+    cursor: not-allowed;
+}
